@@ -1,0 +1,42 @@
+[metadata]
+version = "1.0"
+
+[versions]
+asm = "9.9.1"
+checkstyle = "12.3.1"
+hytale = "2026.02.06-aa1b071c2"
+indra = "4.0.0"
+tinylog = "2.7.0"
+
+[libraries]
+jetbrainsAnnotations = "org.jetbrains:annotations:26.0.2-1"
+jspecify = "org.jspecify:jspecify:1.0.0"
+
+# hytale
+hytale = { module = "com.hypixel.hytale:Server", version.ref = "hytale" }
+
+# logger
+tinylog-api = { module = "org.tinylog:tinylog-api", version.ref = "tinylog" }
+tinylog-impl = { module = "org.tinylog:tinylog-impl", version.ref = "tinylog" }
+
+# loader
+accessWidener = { module = "net.fabricmc:access-widener", version = "2.1.0" }
+asm = { module = "org.ow2.asm:asm", version.ref = "asm" }
+asm-analysis = { module = "org.ow2.asm:asm-analysis", version.ref = "asm" }
+asm-commons = { module = "org.ow2.asm:asm-commons", version.ref = "asm" }
+asm-tree = { module = "org.ow2.asm:asm-tree", version.ref = "asm" }
+asm-util = { module = "org.ow2.asm:asm-util", version.ref = "asm" }
+mixin = { module = "net.fabricmc:sponge-mixin", version = "0.17.0+mixin.0.8.7" }
+mixinExtras = { module = "io.github.llamalad7:mixinextras-common", version = "0.5.3" }
+
+# build
+stylecheck = "ca.stellardrift:stylecheck:0.2.1"
+
+build-indra = { module = "net.kyori:indra-common", version.ref = "indra" }
+build-indra-spotless = { module = "net.kyori:indra-licenser-spotless", version.ref = "indra" }
+build-shadow = { module = "com.gradleup.shadow:com.gradleup.shadow.gradle.plugin", version = "9.3.1" }
+
+# unused, for renovate
+zCheckstyle = { module = "com.puppycrawl.tools:checkstyle", version.ref = "checkstyle" }
+
+[plugins]

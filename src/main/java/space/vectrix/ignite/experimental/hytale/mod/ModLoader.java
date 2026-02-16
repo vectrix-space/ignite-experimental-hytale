@@ -1,0 +1,80 @@
+/*
+ * This file is part of Ignite Experimental Hytale, licensed under the MIT License
+ * (MIT).
+ *
+ * Copyright (c) vectrix.space <https://vectrix.space/>
+ * Copyright (c) contributors
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+package space.vectrix.ignite.experimental.hytale.mod;
+
+import org.spongepowered.asm.mixin.Mixins;
+import org.tinylog.Logger;
+import space.vectrix.ignite.experimental.hytale.ember.Ember;
+import space.vectrix.ignite.experimental.hytale.ember.transformer.EmberAccessTransformer;
+import space.vectrix.ignite.experimental.hytale.ember.transformer.EmberMixinTransformer;
+
+import java.io.IOException;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
+public final class ModLoader {
+  private static final Set<ModCandidate> CANDIDATES = new HashSet<>();
+
+  public static boolean add(final Collection<ModCandidate> candidates) {
+    return ModLoader.CANDIDATES.addAll(candidates);
+  }
+
+  public static void load(final ClassLoader loader) throws IOException {
+    for(final ModCandidate candidate : ModLoader.CANDIDATES) {
+      final EmberAccessTransformer accessTransformer = Ember.INSTANCE.transformer().get(EmberAccessTransformer.class);
+      if(accessTransformer != null) {
+        for(final String widener : candidate.wideners()) {
+          Logger.info("Loading widener '{}' from '{}'...", widener, candidate.name());
+
+          try(final FileSystem fileSystem = FileSystems.newFileSystem(candidate.path(), loader)) {
+            final Path widenerPath = fileSystem.getPath(widener);
+            accessTransformer.addWidener(widenerPath);
+
+            Logger.info("Loaded widener '{}'.", widener);
+          }
+        }
+      }
+
+      final EmberMixinTransformer mixinTransformer = Ember.INSTANCE.transformer().get(EmberMixinTransformer.class);
+      if(mixinTransformer != null) {
+        for(final String mixin : candidate.mixins()) {
+          Logger.info("Loading mixin '{}' from '{}'...", mixin, candidate.name());
+
+          Mixins.addConfiguration(mixin);
+
+          Logger.info("Loaded mixin '{}'.", mixin);
+        }
+      }
+    }
+  }
+
+  private ModLoader() {
+  }
+}

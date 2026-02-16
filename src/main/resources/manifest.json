@@ -1,0 +1,17 @@
+{
+  "Group": "vectrix.space",
+  "Main": "space.vectrix.ignite.experimental.hytale.IgnitePlugin",
+  "Name": "Ignite",
+  "Version": "v0.1.0",
+  "Description": "A mod for Hytale that adds mixin and access widener support.",
+  "Authors": [
+    {
+      "Name": "Vectrix"
+    }
+  ],
+  "Website": "vectrix.space",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false
+}
