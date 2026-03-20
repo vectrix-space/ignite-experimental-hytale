@@ -18,5 +18,5 @@ jobs:
     uses: "vectrix-space/.github/.github/workflows/shared-ci.yaml@main"
     with:
       publish_releases: true
-      runtime_version: 21
+      runtime_version: 25
     secrets: "inherit"
