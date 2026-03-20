@@ -27,6 +27,11 @@ package space.vectrix.ignite.experimental.hytale;
 
 import com.hypixel.hytale.plugin.early.ClassTransformer;
 import com.hypixel.hytale.plugin.early.EarlyPluginLoader;
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.jspecify.annotations.Nullable;
 import org.tinylog.Logger;
 import space.vectrix.ignite.experimental.hytale.ember.Ember;
@@ -37,12 +42,6 @@ import space.vectrix.ignite.experimental.hytale.ember.TransformPhase;
 import space.vectrix.ignite.experimental.hytale.mod.ModCandidate;
 import space.vectrix.ignite.experimental.hytale.mod.ModLoader;
 import space.vectrix.ignite.experimental.hytale.mod.ModLocator;
-
-import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @SuppressWarnings("unused")
 public final class IgniteLoader implements ClassTransformer {

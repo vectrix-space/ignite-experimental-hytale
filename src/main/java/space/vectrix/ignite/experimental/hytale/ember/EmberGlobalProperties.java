@@ -25,11 +25,10 @@
  */
 package space.vectrix.ignite.experimental.hytale.ember;
 
-import org.spongepowered.asm.service.IGlobalPropertyService;
-import org.spongepowered.asm.service.IPropertyKey;
-
 import java.util.HashMap;
 import java.util.Map;
+import org.spongepowered.asm.service.IGlobalPropertyService;
+import org.spongepowered.asm.service.IPropertyKey;
 
 public final class EmberGlobalProperties implements IGlobalPropertyService {
   private final Map<String, IPropertyKey> keys = new HashMap<>();

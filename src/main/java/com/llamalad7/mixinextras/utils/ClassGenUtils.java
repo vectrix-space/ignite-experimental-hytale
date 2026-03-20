@@ -25,15 +25,14 @@
  */
 package com.llamalad7.mixinextras.utils;
 
-import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.tree.ClassNode;
-import org.spongepowered.asm.mixin.MixinEnvironment;
-import space.vectrix.ignite.experimental.hytale.util.IgniteClassDefiner;
-
 import java.lang.invoke.MethodHandles;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.tree.ClassNode;
+import org.spongepowered.asm.mixin.MixinEnvironment;
+import space.vectrix.ignite.experimental.hytale.util.IgniteClassDefiner;
 
 public final class ClassGenUtils {
   private static final Map<String, byte[]> DEFINITIONS = new HashMap<>();

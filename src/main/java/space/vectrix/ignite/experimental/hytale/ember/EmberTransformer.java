@@ -25,6 +25,12 @@
  */
 package space.vectrix.ignite.experimental.hytale.ember;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.IdentityHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.ServiceLoader;
 import org.jspecify.annotations.Nullable;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
@@ -33,13 +39,6 @@ import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.MixinEnvironment;
 import org.tinylog.Logger;
 import space.vectrix.ignite.experimental.hytale.util.IgniteConstants;
-
-import java.util.Collection;
-import java.util.Collections;
-import java.util.IdentityHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ServiceLoader;
 
 public final class EmberTransformer {
   private static final List<String> EXCLUDED_RESOURCES = List.of(

@@ -26,7 +26,6 @@
 package space.vectrix.ignite.experimental.hytale.mod.config;
 
 import com.google.gson.annotations.SerializedName;
-
 import java.util.Set;
 
 public record HyxinConfig(@SerializedName("Configs") Set<String> configs) {

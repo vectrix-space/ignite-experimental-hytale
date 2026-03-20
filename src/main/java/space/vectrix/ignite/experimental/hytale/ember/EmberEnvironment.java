@@ -25,13 +25,12 @@
  */
 package space.vectrix.ignite.experimental.hytale.ember;
 
-import org.jspecify.annotations.Nullable;
-import org.tinylog.Logger;
-
 import java.io.InputStream;
 import java.util.EnumMap;
 import java.util.Iterator;
 import java.util.LinkedList;
+import org.jspecify.annotations.Nullable;
+import org.tinylog.Logger;
 
 import static java.util.Objects.requireNonNull;
 

@@ -25,14 +25,13 @@
  */
 package space.vectrix.ignite.experimental.hytale.ember;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import org.spongepowered.asm.logging.ILogger;
 import org.spongepowered.asm.logging.Level;
 import org.spongepowered.asm.logging.LoggerAdapterAbstract;
 import org.tinylog.Logger;
 import org.tinylog.TaggedLogger;
-
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /* package */ final class EmberMixinLogger extends LoggerAdapterAbstract {
   private static final Map<String, ILogger> LOGGERS = new ConcurrentHashMap<>();

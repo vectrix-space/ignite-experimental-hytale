@@ -25,13 +25,12 @@
  */
 package space.vectrix.ignite.experimental.hytale.util;
 
+import java.lang.invoke.MethodHandles;
 import org.jspecify.annotations.Nullable;
 import org.tinylog.Logger;
 import space.vectrix.ignite.experimental.hytale.ember.Ember;
 import space.vectrix.ignite.experimental.hytale.ember.EmberEnvironment;
 import space.vectrix.ignite.experimental.hytale.ember.TransformPhase;
-
-import java.lang.invoke.MethodHandles;
 
 public final class IgniteClassDefiner {
   private static final byte[] EMPTY_CLASS = new byte[0];

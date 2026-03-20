@@ -27,12 +27,6 @@ package space.vectrix.ignite.experimental.hytale.mod;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.tinylog.Logger;
-import space.vectrix.ignite.experimental.hytale.mod.config.HyxinConfig;
-import space.vectrix.ignite.experimental.hytale.mod.config.IgniteConfig;
-import space.vectrix.ignite.experimental.hytale.mod.config.PluginManifest;
-import space.vectrix.ignite.experimental.hytale.util.IgniteConstants;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.FileSystem;
@@ -42,6 +36,11 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
+import org.tinylog.Logger;
+import space.vectrix.ignite.experimental.hytale.mod.config.HyxinConfig;
+import space.vectrix.ignite.experimental.hytale.mod.config.IgniteConfig;
+import space.vectrix.ignite.experimental.hytale.mod.config.PluginManifest;
+import space.vectrix.ignite.experimental.hytale.util.IgniteConstants;
 
 public final class ModLocator {
   private static final Gson GSON = new GsonBuilder().create();

@@ -25,6 +25,11 @@
  */
 package space.vectrix.ignite.experimental.hytale.ember.transformer;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import net.fabricmc.accesswidener.AccessWidener;
 import net.fabricmc.accesswidener.AccessWidenerClassVisitor;
 import net.fabricmc.accesswidener.AccessWidenerReader;
@@ -34,12 +39,6 @@ import org.objectweb.asm.tree.ClassNode;
 import space.vectrix.ignite.experimental.hytale.ember.TransformPhase;
 import space.vectrix.ignite.experimental.hytale.ember.TransformerService;
 import space.vectrix.ignite.experimental.hytale.util.IgniteConstants;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 public final class EmberAccessTransformer implements TransformerService {
   private final AccessWidener widener = new AccessWidener();

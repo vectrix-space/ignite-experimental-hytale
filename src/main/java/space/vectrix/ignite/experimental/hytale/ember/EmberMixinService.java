@@ -25,6 +25,11 @@
  */
 package space.vectrix.ignite.experimental.hytale.ember;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.Collection;
+import java.util.List;
 import org.jspecify.annotations.Nullable;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.launch.platform.container.IContainerHandle;
@@ -41,12 +46,6 @@ import org.spongepowered.asm.service.ITransformerProvider;
 import org.spongepowered.asm.util.Constants;
 import org.spongepowered.asm.util.ReEntranceLock;
 import space.vectrix.ignite.experimental.hytale.ember.transformer.EmberMixinTransformer;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.util.Collection;
-import java.util.List;
 
 public final class EmberMixinService implements IMixinService, IClassProvider, IClassBytecodeProvider {
   private final EmberMixinContainer container;

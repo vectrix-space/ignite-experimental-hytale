@@ -25,10 +25,9 @@
  */
 package space.vectrix.ignite.experimental.hytale.ember;
 
+import java.nio.file.Path;
 import org.spongepowered.asm.launch.platform.container.ContainerHandleURI;
 import org.spongepowered.asm.launch.platform.container.ContainerHandleVirtual;
-
-import java.nio.file.Path;
 
 public final class EmberMixinContainer extends ContainerHandleVirtual {
   public EmberMixinContainer(final String name) {

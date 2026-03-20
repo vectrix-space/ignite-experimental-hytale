@@ -26,14 +26,13 @@
 package space.vectrix.ignite.experimental.hytale.ember;
 
 import com.llamalad7.mixinextras.MixinExtrasBootstrap;
+import java.io.IOException;
+import java.lang.reflect.Method;
 import org.jetbrains.annotations.UnknownNullability;
 import org.spongepowered.asm.launch.MixinBootstrap;
 import org.spongepowered.asm.mixin.MixinEnvironment;
 import org.tinylog.Logger;
 import space.vectrix.ignite.experimental.hytale.mod.ModLoader;
-
-import java.io.IOException;
-import java.lang.reflect.Method;
 
 public final class Ember {
   public static final Ember INSTANCE = new Ember();

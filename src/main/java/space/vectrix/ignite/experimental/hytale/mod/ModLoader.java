@@ -25,12 +25,6 @@
  */
 package space.vectrix.ignite.experimental.hytale.mod;
 
-import org.spongepowered.asm.mixin.Mixins;
-import org.tinylog.Logger;
-import space.vectrix.ignite.experimental.hytale.ember.Ember;
-import space.vectrix.ignite.experimental.hytale.ember.transformer.EmberAccessTransformer;
-import space.vectrix.ignite.experimental.hytale.ember.transformer.EmberMixinTransformer;
-
 import java.io.IOException;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
@@ -38,6 +32,11 @@ import java.nio.file.Path;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import org.spongepowered.asm.mixin.Mixins;
+import org.tinylog.Logger;
+import space.vectrix.ignite.experimental.hytale.ember.Ember;
+import space.vectrix.ignite.experimental.hytale.ember.transformer.EmberAccessTransformer;
+import space.vectrix.ignite.experimental.hytale.ember.transformer.EmberMixinTransformer;
 
 public final class ModLoader {
   private static final Set<ModCandidate> CANDIDATES = new HashSet<>();

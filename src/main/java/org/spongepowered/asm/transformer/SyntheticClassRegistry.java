@@ -25,13 +25,12 @@
  */
 package org.spongepowered.asm.transformer;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.spongepowered.asm.mixin.throwables.MixinError;
 import org.spongepowered.asm.service.ISyntheticClassInfo;
 import org.spongepowered.asm.service.ISyntheticClassRegistry;
 import space.vectrix.ignite.experimental.hytale.util.IgniteClassDefiner;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @SuppressWarnings("unused")
 public class SyntheticClassRegistry implements ISyntheticClassRegistry {
