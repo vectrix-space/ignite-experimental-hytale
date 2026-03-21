@@ -25,7 +25,7 @@ the Hytale codebase at runtime, without needing to modify the game files.
 > existing mods that were designed for Hyxin without needing any changes.
 >
 > If you are only interested in creating mixins for a server run independently
-> of the client, I would recommend the [launcher version of Ignite.](https://github.com/vectrix-space/ignite)
+> of the client, I would recommend the [launcher version of Ignite](https://github.com/vectrix-space/ignite).
 
 ## Install
 
@@ -36,6 +36,60 @@ Place the `ignite.jar` into the `/earlyplugins` directory (which you may need to
 If you're still confused, be sure to [ask for help](https://discord.gg/chpEj5UC45).
 
 Any mods that use Ignite should then be placed into the `/earlyplugins` directory.
+
+## Creating a Mod
+
+The structure of your mod should follow the existing project structure Hytale expects with a `manifest.json`. However, inside the `manifest.json`
+you will be able to add your mixins and access widener files under the new Ignite section. For example:
+
+```json
+{
+  "Group": "...",
+  "Name": "...",
+  "Version": "...",
+  "Description": "...",
+  "Ignite": {
+    "Mixins": [
+      "your_plugin.mixins.json"
+    ],
+    "Wideners": [
+      "your_plugin.accesswidener"
+    ]
+  }
+}
+```
+
+Your mixin config files are configured how mixin normally expects. For example:
+
+```json
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.example.mixin.test",
+  "plugin": "com.example.mixin.plugin.TestMixinPlugin",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "TestMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
+```
+
+Your access widener files are configured how access wideners normally expects. For example:
+
+```text
+accessWidener v1  named
+
+accessible  class com/example/Example$InnerExample
+```
+
+Your mod must then always be placed in the `/earlyplugins` for Ignite to load it.
 
 ## Building
 
