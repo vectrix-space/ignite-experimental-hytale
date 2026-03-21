@@ -15,14 +15,15 @@
 
 ## Overview
 
-Ignite provides mixin and access widener support for other modders to modify
-the Hytale codebase at runtime, without needing to modify the game files.
+Ignite Experimental Hytale is a mod that provides mixin and access widener support 
+for other mods to modify the server at runtime, without needing to patch the
+game files.
 
 > [!WARNING]
-> This mod is intended to address many of the shortcomings of Hyxin, however it
+> This mod is intended to address many of the shortcomings of [Hyxin], however it
 > is unable to fix all of them due to Hytale and Java limitations. This version
 > is intended to work in singleplayer and multiplayer. It is compatible with
-> existing mods that were designed for Hyxin without needing any changes.
+> existing mods that were designed for [Hyxin] without needing any changes.
 >
 > If you are only interested in creating mixins for a server run independently
 > of the client, I would recommend the [launcher version of Ignite](https://github.com/vectrix-space/ignite).
@@ -120,3 +121,4 @@ This project has many parts inspired by the following projects:
 [Sponge]: https://github.com/SpongePowered/Sponge
 [Velocity]: https://github.com/VelocityPowered/Velocity
 [plugin-spi]: https://github.com/SpongePowered/plugin-spi
+[Hyxin]: https://github.com/Build-9/Hyxin
