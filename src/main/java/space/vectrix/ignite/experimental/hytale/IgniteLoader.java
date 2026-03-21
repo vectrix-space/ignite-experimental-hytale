@@ -62,7 +62,7 @@ public final class IgniteLoader implements ClassTransformer {
 
       // Add this mod path to the mod loader, before we create the loader.
       try {
-        final Path modDirectory = gamePath.resolve("./mods");
+        final Path modDirectory = gamePath.resolve("earlyplugins");
 
         final ClassLoader loader = EmberEnvironment.INSTANCE.find(EmberEnvironment.Stage.EARLY_PLUGIN);
         if(loader == null) throw new IllegalStateException("Unable to locate early plugin loader!");

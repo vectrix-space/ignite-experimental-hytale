@@ -10,7 +10,7 @@
     }
   ],
   "Website": "vectrix.space",
-  "ServerVersion": "*",
+  "ServerVersion": "2026.03.20-db226053c",
   "Dependencies": {},
   "OptionalDependencies": {},
   "DisabledByDefault": false

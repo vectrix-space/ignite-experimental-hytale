@@ -52,7 +52,7 @@ public final class ModLocator {
       try(final Stream<Path> paths = Files.walk(search)) {
         final List<Path> possibleCandidates = paths
           .filter(Files::isRegularFile)
-          .filter(file -> file.endsWith(".jar"))
+          .filter(file -> file.toFile().getPath().endsWith(".jar"))
           .peek(path -> Logger.debug("Found possible mod candidate: {}", path))
           .toList();
 
