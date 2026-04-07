@@ -4,7 +4,7 @@ version = "1.0"
 [versions]
 asm = "9.9.1"
 checkstyle = "12.3.1"
-hytale = "2026.03.23-338988e70"
+hytale = "2026.03.26-92489d5e7"
 indra = "4.0.0"
 tinylog = "2.7.0"
 
@@ -34,7 +34,7 @@ stylecheck = "ca.stellardrift:stylecheck:0.2.1"
 
 build-indra = { module = "net.kyori:indra-common", version.ref = "indra" }
 build-indra-spotless = { module = "net.kyori:indra-licenser-spotless", version.ref = "indra" }
-build-shadow = { module = "com.gradleup.shadow:com.gradleup.shadow.gradle.plugin", version = "9.4.0" }
+build-shadow = { module = "com.gradleup.shadow:com.gradleup.shadow.gradle.plugin", version = "9.4.1" }
 
 # unused, for renovate
 zCheckstyle = { module = "com.puppycrawl.tools:checkstyle", version.ref = "checkstyle" }
