@@ -4,7 +4,7 @@ version = "1.0"
 [versions]
 asm = "9.9.1"
 checkstyle = "12.3.1"
-hytale = "2026.03.26-89796e57b"
+hytale = "2026.04.23-937872667"
 indra = "4.0.0"
 tinylog = "2.7.0"
 
