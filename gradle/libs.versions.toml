@@ -5,7 +5,7 @@ version = "1.0"
 asm = "9.10.1"
 checkstyle = "12.3.1"
 hytale = "0.6.2"
-indra = "4.0.0"
+indra = "4.1.0"
 tinylog = "2.7.0"
 
 [libraries]
